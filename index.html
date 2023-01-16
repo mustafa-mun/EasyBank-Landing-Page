@@ -10,9 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
-<body>
+<body class="relative scroll-smooth">
 
-  <header class="flex bg-white py-6 justify-between relative z-50">
+  <!-- Modal -->
+  <section id="modal" class="absolute bg-[#00003233] hidden top-0 bottom-0 right-0 left-0 z-30"></section>
+  <section id="menu-bar" class="invisible flex flex-col rounded-md items-center absolute top-24 left-6 right-6 h-64 bg-white z-50">
+    <nav class="m-6">
+      <p class="text-lg mb-4 ">Home</p>
+      <p class="text-lg mb-4">About</p>
+      <p class="text-lg mb-4">Contact</p>
+      <p class="text-lg mb-4">Blog</p>
+      <p class="text-lg">Careers</p>
+    </nav>
+  </section>
+  <header class="flex bg-white py-6 justify-between relative z-40">
     <!-- Header -->
     <div>
       <!-- Logo and Name -->
@@ -20,7 +31,10 @@
     </div>
     <nav>
       <!-- Mobile menu  -->
-      <img src="images/icon-hamburger.svg" alt="hamburger" class="mr-6">
+      <div class="relative mr-6 pb-2 ">
+        <img id="menu-icon" src="images/icon-hamburger.svg" alt="hamburger">
+        <img id="close-icon" src="images/icon-close.svg" alt="close" class="absolute hidden top-0 right-0 left-0.5 bottom-0 z-20">
+      </div>
     </nav>
   </header>
   <main class="flex flex-col">
@@ -29,7 +43,7 @@
       <figure class="absolute top-0">
         <!-- Brand Img -->
         <img src="images/bg-intro-mobile.svg" alt="bg-mobile">
-        <img src="images/image-mockups.png" alt="mockups" class="absolute -top-[65px]">
+        <img id="mockups" src="images/image-mockups.png" alt="mockups" class="absolute -top-[65px]">
       </figure>
       <div class="flex flex-col items-center text-center mt-[350px]">
         <!-- Request Invite section -->
